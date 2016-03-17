@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>github404</title>
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  a{
+    text-decoration: none;
+    color:#666;
+  }
+  img{
+    border:0;
+  }
+  #container{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+    #bg{
+      width: 100%;
+      height: 425px;
+      z-index:3;
+      position:relative;
+      top:-20px;
+    }
+    #house1{
+      position:absolute;
+      top:140px;
+      right:280px;
+      z-index:3;
+    }
+    #house2{
+      position:absolute;
+      top:104px;
+      right:390px;
+      z-index:3;
+    }
+    #bed{
+      position:absolute;
+      top:180px;
+      left:620px;
+      z-index:3;
+    }
+    #shadow1{
+      position:absolute;
+      top:290px;
+      left:620px;
+    }
+    #cat{
+       position:absolute;
+      top:130px;
+      left:530px;
+      z-index:4;
+    }
+    #shadow2{
+      position:absolute;
+      top:330px;
+      left:540px;
+      z-index:3;
+    }
+    #not{
+      position:absolute;
+      top:112px;
+      left:260px;
+      z-index:3;
+    }
+    #footer{
+      height: 220px;
+      padding-top: 30px;
+      text-align: center;
+      background:#eee;
+    }
+    #footer label{
+      margin-left:-460px;
+      font-weight: 400;
+    }
+    #search{
+      margin-top: 18px;
+      width: 705px;
+      height: 30px;
+    }
+    #submit{
+      height: 40px;
+      width: 80px;
+      color:#000;
+      font-weight: bold;
+    }
+    #support{
+      margin:30px 300px;
+    }
+    #scat{}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <img id="bg"src="404/下载1.jpg" alt="">
+      <img id="house1" src="404/下载8.png" alt="">
+      <img id="house2"src="404/下载6.png" alt="">
+      <img id="bed"src="404/下载.png" alt="">
+      <img id="shadow1"src="404/下载10.png" alt="">
+      <img id="cat"src="404/下载2.png" alt="">
+      <img id="shadow2"src="404/下载3.png" alt="">
+      <img id="not"src="404/下载00.png" alt="">
+    </div>
+  </div>
+  <div id="footer">
+    <form action="">
+     <label for="search">Find code, projects, and people on GitHub:</label><br>
+      <input type="text" id="search" value="">
+      <input type="button" id="submit" value="search">
+    </form>
+    <div id="support">
+      <a href="https://github.com/contact">Contact Support</a>——
+      <a href="https://github.com/contact">Contact Support</a>——
+      <a href="https://github.com/contact">@Contact Support</a>
+    </div>
+    <a href=""><img id="scat"src="404/下载0.png" alt=""></a>
+  </div>
+  <!-- // <script src="jquery-1.11.3.min.js"></script> -->
+  <script>
+      var oCat=document.getElementById('cat');
+      var oShadow1=document.getElementById('shadow1');
+      var oBed=document.getElementById('bed');
+      var oShadow2=document.getElementById('shadow2');
+      var oNot=document.getElementById('not');
+      var oBed=document.getElementById('bed');
+      var oHouse1=document.getElementById('house1');
+      var oHouse2=document.getElementById('house2');
+      var oBg=document.getElementById('bg');
+
+      document.onmousemove=function(e){
+        e=window.event||e;
+        var mLeft=e.clientX;
+        var mTop=e.clientY;
+        var sWidth=document.documentElement.clientWidth;
+        var sHeight=document.documentElement.clientHeight; 
+        var iLeft=mLeft/sWidth*18;
+        var iTop=mTop/sHeight*8;
+        oCat.style.left=530+iLeft+'px';
+        oCat.style.top=130+iTop+'px';
+        oShadow1.style.left=620+iLeft+'px';
+        oShadow1.style.top=290+iTop+'px';
+        oShadow2.style.left=540+iLeft+'px';
+        oShadow2.style.top=330+iTop+'px';
+        oNot.style.left=260+iLeft+'px';
+        oNot.style.top=112+iTop+'px';
+        oBed.style.left=620+iLeft+'px';
+        oBed.style.top=180+iTop+'px';
+
+        oHouse1.style.right=280+iLeft+'px';
+        oHouse1.style.top=140-iTop+'px';
+        var iLeft1=mLeft/sWidth*24;
+        var iTop1=mTop/sHeight*14;
+        oHouse2.style.right=390+iLeft1+'px';
+        oHouse2.style.top=104-iTop1+'px';
+        oBg.style.top=iTop+'px';
+
+      }
+
+    
+  </script>
+</body>
+</html>
